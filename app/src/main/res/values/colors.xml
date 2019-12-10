@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#01c7d2</color>
+    <color name="colorPrimaryDark">#00b2bc</color>
+    <color name="colorAccent">#ff706a</color>
 
     //Core Despesas
     <color name="colorPrimaryDespesas">#FF706A</color>
@@ -12,5 +12,5 @@
     //Core Receitas
     <color name="colorPrimaryReceitas">#00D39E</color>
     <color name="colorPrimaryDarkReceitas">#00BE8B</color>
-    <color name="colorAccentRecentas">#00D39E</color>
+    <color name="colorAccentReceitas">#00D39E</color>
 </resources>

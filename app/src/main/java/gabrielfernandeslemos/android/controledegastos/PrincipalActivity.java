@@ -1,8 +1,9 @@
 package gabrielfernandeslemos.android.controledegastos;
 
+import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.github.clans.fab.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +20,9 @@ public class PrincipalActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        FloatingActionButton menuDespesa = (FloatingActionButton) findViewById(R.id.menu_despesa);
+        FloatingActionButton menuReceita = (FloatingActionButton) findViewById(R.id.menu_receita);
+
 //        FloatingActionButton fab = findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -27,6 +31,20 @@ public class PrincipalActivity extends AppCompatActivity {
 //                        .setAction("Action", null).show();
 //            }
 //        });
+        menuReceita.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(PrincipalActivity.this, ReceitasActivity.class));
+            }
+        });
+
+        menuDespesa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(PrincipalActivity.this, DespesasActivity.class));
+            }
+        });
+
     }
 
 }
