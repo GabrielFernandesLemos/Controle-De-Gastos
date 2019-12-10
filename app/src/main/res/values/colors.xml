@@ -3,4 +3,14 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    //Core Despesas
+    <color name="colorPrimaryDespesas">#FF706A</color>
+    <color name="colorPrimaryDarkDespesas">#E66560</color>
+    <color name="colorAccentDespesa">#FF706A</color>
+
+    //Core Receitas
+    <color name="colorPrimaryReceitas">#00D39E</color>
+    <color name="colorPrimaryDarkReceitas">#00BE8B</color>
+    <color name="colorAccentRecentas">#00D39E</color>
 </resources>
