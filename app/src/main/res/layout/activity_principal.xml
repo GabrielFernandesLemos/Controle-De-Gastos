@@ -43,6 +43,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_add"
             fab:fab_colorNormal="@color/colorPrimaryReceitas"
+            fab:fab_colorPressed="@color/colorPrimaryReceitas"
             fab:fab_label="Receita"
             fab:fabSize="mini"/>
     </com.github.clans.fab.FloatingActionMenu>
