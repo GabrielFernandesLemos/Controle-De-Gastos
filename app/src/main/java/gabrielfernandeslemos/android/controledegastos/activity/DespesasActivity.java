@@ -1,6 +1,7 @@
-package gabrielfernandeslemos.android.controledegastos;
+package gabrielfernandeslemos.android.controledegastos.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import gabrielfernandeslemos.android.controledegastos.R;
 
 import android.os.Bundle;
 

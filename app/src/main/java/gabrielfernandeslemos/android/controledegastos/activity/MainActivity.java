@@ -1,9 +1,11 @@
-package gabrielfernandeslemos.android.controledegastos;
+package gabrielfernandeslemos.android.controledegastos.activity;
 
 import android.os.Bundle;
 
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
+
+import gabrielfernandeslemos.android.controledegastos.R;
 
 public class MainActivity extends IntroActivity {
 

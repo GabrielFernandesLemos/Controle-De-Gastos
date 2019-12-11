@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PrincipalActivity">
+    tools:context=".activity.PrincipalActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -34,6 +34,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_add"
             fab:fab_colorNormal="@color/colorPrimaryDespesas"
+            fab:fab_colorPressed="@color/colorPrimaryDespesas"
             fab:fab_label="Despesa"
             fab:fabSize="mini"/>
 
