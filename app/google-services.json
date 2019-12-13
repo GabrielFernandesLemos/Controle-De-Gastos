@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "261947120601",
+    "firebase_url": "https://controle-de-gastos-eaa56.firebaseio.com",
+    "project_id": "controle-de-gastos-eaa56",
+    "storage_bucket": "controle-de-gastos-eaa56.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261947120601:android:dd3fb6bf93d704b23217c8",
+        "android_client_info": {
+          "package_name": "gabrielfernandeslemos.android.controledegastos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "261947120601-nn0tdakkmce8l46qjij8mpjgm6qar12m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "gabrielfernandeslemos.android.controledegastos",
+            "certificate_hash": "0607e34d70146b297312da9624798e76d5da924d"
+          }
+        },
+        {
+          "client_id": "261947120601-m67pvln7u2uio91eh2kdfpneblc6ld8l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmowJJ1NAfUth0mulZ8hONxUmdqsSUxNc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "261947120601-m67pvln7u2uio91eh2kdfpneblc6ld8l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
