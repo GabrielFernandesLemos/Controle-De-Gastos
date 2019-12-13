@@ -13,14 +13,18 @@ import androidx.appcompat.widget.Toolbar;
 import gabrielfernandeslemos.android.controledegastos.R;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class PrincipalActivity extends AppCompatActivity {
 
     private MaterialCalendarView calendarView;
-    private TextView textoSaucacao, textoSaldo;
+    private TextView textoSaucacao, textoSaldo, btnLogin;
     FloatingActionButton menuDespesa, menuReceita;
+    Button btnCadastro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +38,8 @@ public class PrincipalActivity extends AppCompatActivity {
         calendarView = (MaterialCalendarView) findViewById(R.id.calendarView);
         textoSaucacao = (TextView) findViewById(R.id.txtSaudacao);
         textoSaldo = (TextView) findViewById(R.id.txtSaldo);
+        btnCadastro = (Button) findViewById(R.id.btnCadastrar);
+        btnLogin = (TextView) findViewById(R.id.btnEntrar);
 
         configurarCalendarView();
 
@@ -48,6 +54,20 @@ public class PrincipalActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(PrincipalActivity.this, DespesasActivity.class));
+            }
+        });
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(PrincipalActivity.this, LoginActivity.class));
+            }
+        });
+
+        btnCadastro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(PrincipalActivity.this, CadastroActivity.class));
             }
         });
 
