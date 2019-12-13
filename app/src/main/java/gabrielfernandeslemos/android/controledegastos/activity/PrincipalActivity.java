@@ -4,14 +4,23 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.github.clans.fab.FloatingActionButton;
+import com.prolificinteractive.materialcalendarview.CalendarDay;
+import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
+import com.prolificinteractive.materialcalendarview.OnMonthChangedListener;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import gabrielfernandeslemos.android.controledegastos.R;
 
 import android.view.View;
+import android.widget.CalendarView;
+import android.widget.TextView;
 
 public class PrincipalActivity extends AppCompatActivity {
+
+    private MaterialCalendarView calendarView;
+    private TextView textoSaucacao, textoSaldo;
+    FloatingActionButton menuDespesa, menuReceita;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,17 +29,14 @@ public class PrincipalActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton menuDespesa = (FloatingActionButton) findViewById(R.id.menu_despesa);
-        FloatingActionButton menuReceita = (FloatingActionButton) findViewById(R.id.menu_receita);
+        menuDespesa = (FloatingActionButton) findViewById(R.id.menu_despesa);
+        menuReceita = (FloatingActionButton) findViewById(R.id.menu_receita);
+        calendarView = (MaterialCalendarView) findViewById(R.id.calendarView);
+        textoSaucacao = (TextView) findViewById(R.id.txtSaudacao);
+        textoSaldo = (TextView) findViewById(R.id.txtSaldo);
 
-//        FloatingActionButton fab = findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
+        configurarCalendarView();
+
         menuReceita.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,6 +51,18 @@ public class PrincipalActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void configurarCalendarView(){
+        CharSequence meses[] = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
+        calendarView.setTitleMonths(meses);
+
+        calendarView.setOnMonthChangedListener(new OnMonthChangedListener() {
+            @Override
+            public void onMonthChanged(MaterialCalendarView widget, CalendarDay date) {
+
+            }
+        });
     }
 
 }
