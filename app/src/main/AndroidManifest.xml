@@ -18,11 +18,11 @@
             android:name=".activity.ReceitasActivity"
             android:theme="@style/ReceitasTheme" />
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".activity.PrincipalActivity"
             android:label="@string/title_activity_principal"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.PrincipalActivity"
+            android:name=".activity.MainActivity"
             android:theme="@style/Theme.Intro">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
