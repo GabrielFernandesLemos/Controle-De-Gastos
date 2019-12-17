@@ -6,18 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".activity.PrincipalActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary" />
-
-    </com.google.android.material.appbar.AppBarLayout>
-
     <include layout="@layout/content_principal" />
 
     <com.github.clans.fab.FloatingActionMenu
@@ -35,7 +23,7 @@
             android:src="@drawable/ic_add"
             fab:fab_colorNormal="@color/colorPrimaryDespesas"
             fab:fab_colorPressed="@color/colorPrimaryDespesas"
-            fab:fab_label="Despesa"
+            fab:fab_label="Cadastrar despesa"
             fab:fabSize="mini"/>
 
         <com.github.clans.fab.FloatingActionButton
@@ -45,7 +33,7 @@
             android:src="@drawable/ic_add"
             fab:fab_colorNormal="@color/colorPrimaryReceitas"
             fab:fab_colorPressed="@color/colorPrimaryReceitas"
-            fab:fab_label="Receita"
+            fab:fab_label="Cadastrar receita"
             fab:fabSize="mini"/>
     </com.github.clans.fab.FloatingActionMenu>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

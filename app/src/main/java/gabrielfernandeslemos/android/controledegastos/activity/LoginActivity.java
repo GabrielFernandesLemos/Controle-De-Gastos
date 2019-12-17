@@ -6,6 +6,7 @@ import gabrielfernandeslemos.android.controledegastos.R;
 import gabrielfernandeslemos.android.controledegastos.config.ConfiguracaoFirebase;
 import gabrielfernandeslemos.android.controledegastos.model.Usuario;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         campoEmail = findViewById(R.id.emailLogin);
-        campoEmail = findViewById(R.id.senhaLogin);
+        campoSenha = findViewById(R.id.senhaLogin);
         botaoEntrar = findViewById(R.id.botaoLogin);
 
         botaoEntrar.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +44,8 @@ public class LoginActivity extends AppCompatActivity {
                 verificarCampos();
                 usuario.setEmail(campoEmail.getText().toString());
                 usuario.setSenha(campoSenha.getText().toString());
+                validarLogin();
+                abrirTelaPrincipal();
             }
         });
 
@@ -71,6 +74,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if ( task.isSuccessful() ){
                     Toast.makeText(LoginActivity.this, "Sucesso ao fazer login", Toast.LENGTH_SHORT).show();
+
                 }else{
                     String excecao;
                     try {
@@ -83,9 +87,13 @@ public class LoginActivity extends AppCompatActivity {
                         excecao = "Erro ao fazer login" + e.getMessage();
                         e.printStackTrace();
                     }
-                    Toast.makeText(LoginActivity.this, "Erro ao fazer login", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, excecao, Toast.LENGTH_SHORT).show();
                 }
             }
         });
+    }
+
+    public void abrirTelaPrincipal(){
+        startActivity(new Intent(LoginActivity.this, PrincipalActivity.class));
     }
 }

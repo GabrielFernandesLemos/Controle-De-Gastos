@@ -29,8 +29,6 @@ public class PrincipalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         menuDespesa = (FloatingActionButton) findViewById(R.id.menu_despesa);
         menuReceita = (FloatingActionButton) findViewById(R.id.menu_receita);
