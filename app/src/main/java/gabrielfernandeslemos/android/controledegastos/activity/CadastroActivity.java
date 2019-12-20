@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import gabrielfernandeslemos.android.controledegastos.config.ConfiguracaoFirebase;
 import gabrielfernandeslemos.android.controledegastos.R;
+import gabrielfernandeslemos.android.controledegastos.helper.Base64Custom;
 import gabrielfernandeslemos.android.controledegastos.model.Usuario;
 
 import android.content.Intent;
@@ -78,8 +79,8 @@ public class CadastroActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-//                    Toast.makeText(CadastroActivity.this, "Sucesso ao cadastrar usuário", Toast.LENGTH_SHORT).show();
-//                    startActivity(new Intent(CadastroActivity.this, PrincipalActivity.class));
+                    String idUsuario = Base64Custom.codificarBase64( usuario.getEmail() );
+                    usuario.setIdUsuario( idUsuario );
                     finish();
                 }else{
 
